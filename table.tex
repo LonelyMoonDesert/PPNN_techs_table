@@ -2,6 +2,7 @@
 \usepackage{amssymb}
 \usepackage{booktabs}
 \usepackage{graphicx} % for \resizebox
+\usepackage{pifont}
 \usepackage[a4paper, left=1.5cm, right=1.5cm, top=1.5cm, bottom=2cm]{geometry}
 \begin{document}
 
@@ -12,14 +13,27 @@
 \newcommand{\opencircle}{\ensuremath{\circ}}
 
 \begin{table}[htbp]
-\caption{Framework Summary (\uptriangle: Oblivious Inference, \downtriangle: Outsourced Inference, \opensquare: Outsourced Training, \fullsquare: Private Training)}
+\caption{Framework Summary (\ding{116}: Oblivious Inference, \ding{115}: Outsourced Inference, \opensquare: Outsourced Training, \fullsquare: Private Training)}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{llcccccccccccccccccccccc}
 \toprule
-Framework & Reference & Year & \rotatebox{90}{Privacy Service} & \rotatebox{90}{Bitwidth} & \rotatebox{90}{B/Q/N} & \rotatebox{90}{Poly.} & \rotatebox{90}{Approx. CMP} & \rotatebox{90}{Non-linear} & \rotatebox{90}{Method Online} & \rotatebox{90}{Offline} & \rotatebox{90}{SIMD} & \rotatebox{90}{Dynamic} & \rotatebox{90}{Weights} & \rotatebox{90}{CPU} & \rotatebox{90}{Optimize Arch.} & \rotatebox{90}{MNIST} & \rotatebox{90}{CIFAR-10} & \rotatebox{90}{CIFAR-100} & \rotatebox{90}{ImageNet} & \rotatebox{90}{GCC/MW} & \rotatebox{90}{OT} & \rotatebox{90}{SS} & \rotatebox{90}{HE} \\
+Framework & 
+Reference & Year & \rotatebox{90}{Privacy Service} & 
+\rotatebox{90}{Trunc.\& Wrap} & \rotatebox{90}{Bitwidth} & \rotatebox{90}{B/QNN} & 
+\rotatebox{90}{Poly.Approx.} & \rotatebox{90}{CMP} & \rotatebox{90}{Num. Method} & 
+\rotatebox{90}{Offline/Online} & \rotatebox{90}{HE SIMD} & \rotatebox{90}{Dyna. Weights} & \rotatebox{90}{GPU} & \rotatebox{90}{Optimize Arch.} & \rotatebox{90}{Compiler} &
+\rotatebox{90}{MNIST} & \rotatebox{90}{CIFAR-10} & \rotatebox{90}{CIFAR-100} & \rotatebox{90}{ImageNet} & 
+\rotatebox{90}{GC/GMW} & \rotatebox{90}{OT} & \rotatebox{90}{SS} & \rotatebox{90}{HE} \\
 \midrule
-CryptoNets & [11] & 16 & \uptriangle & 32 & H & . & . & . & \opencircle & \opencircle & \opencircle & \opencircle & \opencircle & \opencircle & \opencircle & \fullsquare & \fullsquare & \opencircle & \opencircle & L & L & L & L \\
-BNormCrypt & [53] & 17 & \uptriangle & H? & . & . & . & . & \opencircle & \opencircle & \opencircle & \opencircle & \opencircle & \opencircle & \opencircle & \fullsquare & \opencircle & \opencircle & \opencircle & L & L & L & L \\
+CryptoNets & 
+[11] & 16 & \ding{116} & 
+\ding{109} & H & - &
+\ding{108} & \ding{109} & - & 
+\ding{109} & \ding{108} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & 
+\ding{108} & \ding{109} & \ding{109} & \ding{109} &
+\ding{109} & \ding{109} & \ding{109} & L \\
+
+
 \bottomrule
 \end{tabular}%
 }
